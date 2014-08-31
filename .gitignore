@@ -1,0 +1,5 @@
+vim/vim/bundle/*
+*.pyc
+security/
+*.sqlite
+db/
