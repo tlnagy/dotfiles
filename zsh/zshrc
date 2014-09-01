@@ -87,7 +87,6 @@ alias workoff="source $HOME/anaconda/bin/deactivate"
 alias ijulia='ipython notebook --profile julia'
 alias ipydark='ipython notebook --profile dark'
 
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 export PATH="$HOME/anaconda/bin:$PATH"
-# export PATH="$PATH:/Users/tamasnagy/Documents/julia"
 
