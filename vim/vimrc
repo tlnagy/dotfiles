@@ -39,5 +39,6 @@ set nu
 set guioptions-=T
 
 set laststatus=2
+set backspace=2
 
 highlight clear SignColumn
