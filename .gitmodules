@@ -1,3 +1,6 @@
 [submodule "vim/vim/bundle/neobundle.vim"]
 	path = vim/vim/bundle/neobundle.vim
 	url = https://github.com/Shougo/neobundle.vim.git
+[submodule "ipython/nbextensions/mathjax"]
+	path = ipython/nbextensions/mathjax
+	url = https://github.com/mathjax/MathJax.git
