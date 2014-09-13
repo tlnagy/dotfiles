@@ -41,5 +41,6 @@ set guioptions-=T
 set laststatus=2
 set backspace=2
 autocmd FileType Markdown setlocal spell
+let g:vim_markdown_initial_foldlevel=2
 
 highlight clear SignColumn
