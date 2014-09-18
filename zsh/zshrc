@@ -86,6 +86,10 @@ alias workon="source $HOME/anaconda/bin/activate"
 alias workoff="source $HOME/anaconda/bin/deactivate"
 alias ijulia='ipython notebook --profile julia'
 alias ipydark='ipython notebook --profile dark'
+alias gs='git status'
+alias ..='cd ..'
+alias ....='cd ../..'
+alias ......='cd ../../..'
 
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 export PATH="$HOME/anaconda/bin:$PATH"
