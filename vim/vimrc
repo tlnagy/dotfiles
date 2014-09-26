@@ -12,11 +12,14 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'godlygeek/tabular'
-NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'reedes/vim-pencil'
+NeoBundle 'reedes/vim-colors-pencil'
 
 call neobundle#end()
 
 filetype plugin indent on
+set nocompatible
 
 " Check for missing bundles
 NeoBundleCheck
@@ -33,6 +36,19 @@ set guioptions-=T
 set laststatus=2
 set backspace=2
 autocmd BufRead,BufNewFile *.md setlocal spell
-let g:vim_markdown_initial_foldlevel=2
+
+let g:pencil#wrapModeDefault = 'hard'
+let g:airline_section_x = '%{PencilMode()}'
+
+let g:airline_theme = 'pencil'
+let g:pencil_terminal_italics = 1
+colorscheme pencil
+set background=dark
+
+augroup pencil
+    autocmd!
+    autocmd FileType markdown,mkd call pencil#init()
+    autocmd FileType text         call pencil#init()
+augroup END
 
 highlight clear SignColumn
