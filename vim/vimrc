@@ -15,6 +15,8 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'reedes/vim-pencil'
 NeoBundle 'reedes/vim-colors-pencil'
+NeoBundle 'junegunn/goyo.vim'
+NeoBundle 'junegunn/limelight.vim'
 
 call neobundle#end()
 
@@ -49,6 +51,12 @@ augroup pencil
     autocmd!
     autocmd FileType markdown,mkd call pencil#init()
     autocmd FileType text         call pencil#init()
+augroup END
+
+augroup limelight_pencil
+    autocmd!
+    autocmd ColorScheme * let g:limelight_conceal_ctermfg =
+                            \ (&bg == 'dark') ? 'red' : 'darkgray'
 augroup END
 
 highlight clear SignColumn
