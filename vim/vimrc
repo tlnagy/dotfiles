@@ -13,10 +13,11 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'tpope/vim-markdown'
-NeoBundle 'reedes/vim-pencil'
 NeoBundle 'reedes/vim-colors-pencil'
 NeoBundle 'junegunn/goyo.vim'
 NeoBundle 'junegunn/limelight.vim'
+NeoBundle 'vim-pandoc/vim-pandoc-syntax'
+NeoBundle 'vim-pandoc/vim-pandoc'
 
 call neobundle#end()
 
@@ -39,19 +40,11 @@ set laststatus=2
 set backspace=2
 autocmd BufRead,BufNewFile *.md setlocal spell
 
-let g:pencil#wrapModeDefault = 'hard'
-let g:airline_section_x = '%{PencilMode()}'
-
 let g:airline_theme = 'pencil'
-let g:pencil_terminal_italics = 1
 colorscheme pencil
 set background=dark
 
-augroup pencil
-    autocmd!
-    autocmd FileType markdown,mkd call pencil#init()
-    autocmd FileType text         call pencil#init()
-augroup END
+let g:pandoc#formatting#mode = 'h'
 
 augroup limelight_pencil
     autocmd!
