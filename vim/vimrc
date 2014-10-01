@@ -17,7 +17,8 @@ NeoBundle 'reedes/vim-colors-pencil'
 NeoBundle 'junegunn/goyo.vim'
 NeoBundle 'junegunn/limelight.vim'
 NeoBundle 'vim-pandoc/vim-pandoc-syntax'
-NeoBundle 'vim-pandoc/vim-pandoc'
+NeoBundle 'sjl/gundo.vim'
+NeoBundle 'reedes/vim-pencil'
 
 call neobundle#end()
 
@@ -40,11 +41,21 @@ set laststatus=2
 set backspace=2
 autocmd BufRead,BufNewFile *.md setlocal spell
 
+let g:pencil#wrapModeDefault = 'hard'
+let g:airline_section_x = '%{PencilMode()}'
+
 let g:airline_theme = 'pencil'
+let g:pencil_terminal_italics = 1
 colorscheme pencil
 set background=dark
 
 let g:pandoc#formatting#mode = 'h'
+
+augroup pencil
+    autocmd!
+    autocmd FileType markdown,mkd call pencil#init()
+    autocmd FileType text         call pencil#init()
+augroup END
 
 augroup limelight_pencil
     autocmd!
@@ -53,3 +64,18 @@ augroup limelight_pencil
 augroup END
 
 highlight clear SignColumn
+
+set undofile
+set list
+set listchars=tab:▸\ ,eol:¬
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+inoremap jj <ESC>
+nnoremap <F5> :GundoToggle<CR>
+set textwidth=74
