@@ -38,7 +38,6 @@ set guioptions-=T
 
 set laststatus=2
 set backspace=2
-autocmd BufRead,BufNewFile *.md setlocal spell
 
 let g:airline_theme = 'pencil'
 colorscheme pencil
@@ -46,12 +45,13 @@ set background=light
 
 let mapleader = ","
 let maplocalleader = ",,"
-let g:pandoc#formatting#mode = 'h'
-let g:pandoc#formatting#mode='hA'
-let g:pandoc#formatting#textwidth=74
-let g:pandoc#folding#fold_yaml=1
-let g:pandoc#folding#level=5
+let g:pandoc#formatting#mode = 'hA'
+let g:pandoc#formatting#textwidth = 74
+let g:pandoc#modules#disabled = ["folding"]
 let g:tex_conceal = "admg"
+let g:pandoc#formatting#smart_autoformat_on_cursormove = 1
+let g:pandoc#biblio#use_bibtool = 1
+let g:pandoc#keyboard#wrap_cursor = 1
 
 augroup limelight_pencil
     autocmd!
