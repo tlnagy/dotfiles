@@ -4,6 +4,7 @@ all:
 	@git submodule update
 	@echo 'Setting up links'
 	@ln -sf $(CURDIR)/zsh/zshrc ~/.zshrc
+	@ln -sf $(CURDIR)/vimperator/vimperatorrc ~/.vimperatorrc
 	@rm -rf ~/.vim
 	@ln -nsf $(CURDIR)/vim/vim ~/.vim
 	@ln -sf $(CURDIR)/vim/vimrc ~/.vimrc
