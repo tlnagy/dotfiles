@@ -18,6 +18,9 @@ NeoBundle 'junegunn/limelight.vim'
 NeoBundle 'vim-pandoc/vim-pandoc-syntax'
 NeoBundle 'vim-pandoc/vim-pandoc'
 NeoBundle 'sjl/gundo.vim'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'tpope/vim-surround'
 
 call neobundle#end()
 
