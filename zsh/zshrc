@@ -61,7 +61,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/loca
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
 # fi
@@ -82,8 +82,8 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/loca
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-alias workon="source $HOME/anaconda/bin/activate"
-alias workoff="source $HOME/anaconda/bin/deactivate"
+alias workon="source $HOME/miniconda3/bin/activate"
+alias workoff="source $HOME/miniconda3/bin/deactivate"
 alias ijulia='ipython notebook --profile julia'
 alias ipydark='ipython notebook --profile dark'
 alias gs='git status'
@@ -92,5 +92,5 @@ alias ....='cd ../..'
 alias ......='cd ../../..'
 
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-export PATH="$HOME/anaconda/bin:$PATH"
+export PATH="$HOME/miniconda3/bin:$PATH"
 
