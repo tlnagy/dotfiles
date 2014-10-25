@@ -21,6 +21,7 @@ NeoBundle 'sjl/gundo.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'dhruvasagar/vim-table-mode'
 
 call neobundle#end()
 
