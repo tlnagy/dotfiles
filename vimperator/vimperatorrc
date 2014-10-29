@@ -1,2 +1,5 @@
 set visualbell
 set showstatuslinks=2
+
+noremap j 3j
+noremap k 3k
