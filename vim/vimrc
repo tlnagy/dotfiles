@@ -10,8 +10,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Custom bundles
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bling/vim-airline'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'godlygeek/tabular'
 NeoBundle 'reedes/vim-colors-pencil'
 NeoBundle 'junegunn/goyo.vim'
 NeoBundle 'junegunn/limelight.vim'
@@ -22,6 +20,10 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'dhruvasagar/vim-table-mode'
+NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'beloglazov/vim-online-thesaurus'
+NeoBundle 'vim-scripts/YankRing.vim'
+NeoBundle 'wincent/command-t'
 
 call neobundle#end()
 
@@ -48,8 +50,7 @@ let g:airline#extensions#tabline#enabled = 1
 colorscheme pencil
 set background=light
 
-let mapleader = ","
-let maplocalleader = ",,"
+let maplocalleader = ","
 let g:pandoc#formatting#mode = 'hA'
 let g:pandoc#formatting#textwidth = 74
 let g:pandoc#modules#disabled = ["folding"]
