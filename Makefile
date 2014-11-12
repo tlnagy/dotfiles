@@ -10,6 +10,8 @@ all:
 	@ln -sf $(CURDIR)/vim/vimrc ~/.vimrc
 	@ln -sf $(CURDIR)/tmux/tmux.conf ~/.tmux.conf
 	@ln -nsf $(CURDIR)/ipython/ ~/.ipython
+	@ln -sf $(CURDIR)/gitignore ~/.gitignore
+	@git config --global core.excludesfile '~/.gitignore'
 	@echo 'Installing vim plugins'
 	@vim +NeoBundleInstall +qall
 
