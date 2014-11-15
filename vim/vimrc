@@ -65,6 +65,9 @@ augroup limelight_pencil
                             \ (&bg == 'dark') ? 'red' : 'darkgray'
 augroup END
 
+au User TableModeEnabled call pandoc#formatting#DisableAutoformat()
+au User TableModeDisabled call pandoc#formatting#EnableAutoformat()
+
 highlight clear SignColumn
 
 set undofile
