@@ -45,13 +45,14 @@ set guioptions-=T
 set laststatus=2
 set backspace=2
 
-let g:airline_theme = 'pencil'
-let g:airline#extensions#tabline#enabled = 1
 try
     colorscheme pencil
     set background=dark
+    let g:airline_theme = 'pencil'
+    let g:airline#extensions#tabline#enabled = 1
 catch /^Vim\%((\a\+)\)\=:E185/
-    echom "Pencil theme not installed, using default"
+    " This should only happen before NeoBundle runs so we'll just drop
+    " this error
 endtry
 
 let maplocalleader = ","
