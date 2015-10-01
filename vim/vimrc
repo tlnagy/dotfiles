@@ -47,8 +47,12 @@ set backspace=2
 
 let g:airline_theme = 'pencil'
 let g:airline#extensions#tabline#enabled = 1
-colorscheme pencil
-set background=light
+try
+    colorscheme pencil
+    set background=dark
+catch /^Vim\%((\a\+)\)\=:E185/
+    echom "Pencil theme not installed, using default"
+endtry
 
 let maplocalleader = ","
 let g:pandoc#formatting#mode = 'hA'
