@@ -22,7 +22,6 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'dhruvasagar/vim-table-mode'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'beloglazov/vim-online-thesaurus'
-NeoBundle 'vim-scripts/YankRing.vim'
 NeoBundle 'wincent/command-t'
 NeoBundle 'christoomey/vim-tmux-navigator'
 
