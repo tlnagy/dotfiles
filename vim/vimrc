@@ -32,7 +32,10 @@ NeoBundleCheck
 " Custom settings
 syntax on
 set expandtab
-set shiftwidth=2
+set tabstop=4
+set softtabstop=0
+set shiftwidth=4
+set smarttab
 set autoindent
 set smartindent
 set nu
@@ -56,7 +59,6 @@ let g:pandoc#formatting#mode = 'hA'
 let g:pandoc#formatting#textwidth = 74
 let g:pandoc#modules#disabled = ["folding"]
 let g:tex_conceal = "admg"
-let g:pandoc#formatting#smart_autoformat_on_cursormove = 1
 let g:pandoc#biblio#use_bibtool = 1
 let g:pandoc#keyboard#wrap_cursor = 1
 
