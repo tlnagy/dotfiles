@@ -96,3 +96,7 @@ imap <C-w> <C-o><C-w>
 
 " Stop netrw from producing an unnecessary history file
 let g:netrw_dirhistmax = 0
+
+" Enable spell checking in git commit messages. See
+" http://stackoverflow.com/questions/1691060/vim-set-spell-in-file-git-commit-editmsg
+autocmd FileType gitcommit setlocal spell
