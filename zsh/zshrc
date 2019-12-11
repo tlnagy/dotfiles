@@ -7,7 +7,7 @@ DEFAULT_USER="`whoami`"
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="hyperzsh"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -47,7 +47,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew tmux python virtualenv)
+plugins=(git python virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,17 +82,9 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-alias workon="source $HOME/miniconda3/bin/activate"
-alias workoff="source $HOME/miniconda3/bin/deactivate"
-alias ijulia='ipython notebook --profile julia'
-alias ipydark='ipython notebook --profile dark'
 alias gs='git status'
 alias ..='cd ..'
 alias ....='cd ../..'
 alias ......='cd ../../..'
 
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-export PATH="$HOME/miniconda3/bin:$PATH"
-# /usr/texbin is no longer allowed under el capitan so update path
-export PATH="$PATH:/Library/TeX/texbin"
-
+alias julia="$HOME/Documents/julia-1.3.0/bin/julia"
